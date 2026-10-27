@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17403A">
+  <meta name="description" content="منصة الجنوب بلس الإعلامية — نعود إليكم قريبًا.">
+  <title>منصة الجنوب بلس الإعلامية | نطلق قريبًا</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #17403A;
+      --green-light: #7A8F8B;
+      --red: #C8101A;
+      --white: #F2F2F2;
+      --bg: #F4F6F5;
+      --text: #14201E;
+      --muted: #5d6b68;
+    }
+    * { box-sizing: border-box; }
+    html, body { min-height: 100%; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 50% 35%, rgba(122,143,139,.13), transparent 54%),
+        var(--bg);
+      font-family: 'Cairo', Tahoma, sans-serif;
+      line-height: 1.7;
+    }
+    .topline { height: 6px; background: var(--red); width: 100%; }
+    header {
+      width: 100%;
+      padding: 22px clamp(18px, 5vw, 64px);
+      background: var(--green);
+      color: var(--white);
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+    .brand {
+      max-width: 1120px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    .logo { width: clamp(120px, 18vw, 172px); height: auto; flex: 0 0 auto; }
+    .brand-copy { text-align: right; }
+    .brand-copy strong { display: block; font-size: clamp(1.1rem, 2.4vw, 1.65rem); font-weight: 900; }
+    .brand-copy span { color: #c9d6d3; font-size: clamp(.78rem, 1.6vw, .98rem); }
+    main {
+      flex: 1;
+      display: grid;
+      place-items: center;
+      padding: 56px 20px 68px;
+      text-align: center;
+    }
+    .message { width: min(100%, 760px); margin: auto; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--red);
+      font-weight: 800;
+      font-size: .9rem;
+      letter-spacing: .02em;
+      margin-bottom: 12px;
+    }
+    .eyebrow::before, .eyebrow::after {
+      content: "";
+      width: 24px;
+      height: 2px;
+      background: var(--red);
+      opacity: .75;
+    }
+    h1 {
+      margin: 0;
+      color: var(--green);
+      font-size: clamp(2rem, 6vw, 4rem);
+      font-weight: 900;
+      line-height: 1.35;
+    }
+    .accent {
+      display: block;
+      width: 76px;
+      height: 5px;
+      border-radius: 99px;
+      background: var(--red);
+      margin: 24px auto;
+    }
+    .subtitle {
+      margin: 0 auto;
+      max-width: 590px;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.3vw, 1.25rem);
+      line-height: 2;
+    }
+    .status {
+      margin: 32px auto 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid rgba(23,64,58,.15);
+      background: rgba(255,255,255,.72);
+      color: var(--green);
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-weight: 700;
+      font-size: .92rem;
+    }
+    .dot {
+      width: 9px; height: 9px; border-radius: 50%;
+      background: var(--red);
+      box-shadow: 0 0 0 4px rgba(200,16,26,.1);
+    }
+    footer {
+      background: var(--green);
+      color: #dfe8e6;
+      border-top: 4px solid var(--red);
+      padding: 18px 20px;
+      text-align: center;
+      font-size: .84rem;
+    }
+    footer p { margin: 0; }
+    @media (max-width: 540px) {
+      header { padding: 18px 14px; }
+      .brand { gap: 10px; }
+      .logo { width: 100px; }
+      .brand-copy strong { font-size: 1rem; }
+      .brand-copy span { font-size: .72rem; }
+      main { padding: 44px 20px 54px; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .message { animation: rise .7s ease-out both; }
+      @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    }
+  </style>
+</head>
+<body>
+  <div class="topline" aria-hidden="true"></div>
+  <header>
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 300 120" role="img" aria-label="شعار الجنوب بلس">
+        <defs>
+          <linearGradient id="lg" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#17403A"/>
+            <stop offset=".5" stop-color="#7A8F8B"/>
+            <stop offset="1" stop-color="#17403A"/>
+          </linearGradient>
+        </defs>
+        <path d="M60 8H292V70Q292 112 250 112H8V60Q8 8 60 8Z" fill="url(#lg)" stroke="#F2F2F2" stroke-opacity=".25"/>
+        <path d="M28 38h22V22h24v16h22v24H74v26H50V62H28z" fill="#C8101A"/>
+        <text x="270" y="86" text-anchor="end" font-family="Cairo, Tahoma, sans-serif" font-weight="900" font-size="64" fill="#F2F2F2">الجنوب</text>
+      </svg>
+      <div class="brand-copy">
+        <strong>منصة الجنوب بلس الإعلامية</strong>
+        <span>الجنوب.. قضية وهوية وتاريخ</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="message" aria-labelledby="launch-title">
+      <div class="eyebrow">قريبًا</div>
+      <h1 id="launch-title">موقعنا سيُطلق قريبًا</h1>
+      <span class="accent" aria-hidden="true"></span>
+      <p class="subtitle">نعمل على تجهيز تجربة إعلامية تليق بكم، لنوافيكم بالأخبار والتقارير من منصة الجنوب بلس.</p>
+      <div class="status"><span class="dot" aria-hidden="true"></span> نلتقي بكم قريبًا</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year">2026</span> منصة الجنوب بلس الإعلامية — جميع الحقوق محفوظة</p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
